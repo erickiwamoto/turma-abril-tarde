@@ -1,0 +1,167 @@
+[
+  {
+    "uri": "features/specs/login.feature",
+    "id": "login",
+    "keyword": "Funcionalidade",
+    "name": "Login",
+    "description": "  Sendo um usuário do Invoices\n  Posso fazer login no sistema\n  Para que eu possa cadastrar meus clientes e lançar faturas",
+    "line": 3,
+    "elements": [
+      {
+        "id": "login;acessa-pagina-de-login",
+        "keyword": "Cenario",
+        "name": "Acessa pagina de login",
+        "description": "",
+        "line": 9,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "acesso a pagina de Login",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16307453000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "vejo a página de login",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 496227000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;login-com-sucesso",
+        "keyword": "Cenario",
+        "name": "Login com sucesso",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@logout",
+            "line": 13
+          },
+          {
+            "name": "@smoke",
+            "line": 13
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu tenho um usuário:",
+            "line": 16,
+            "rows": [
+              {
+                "cells": [
+                  "Usuario",
+                  "kato.danzo@qaninja.com.br"
+                ]
+              },
+              {
+                "cells": [
+                  "Senha",
+                  "secret"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 342000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faço login",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1050297000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "vejo o Dashboard com a mensagem \"Bem Vindo Kato Danzo!\"",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1133132000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "vejo o email do usuário no menu superior",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80406000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1814471000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

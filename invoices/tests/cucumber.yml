@@ -1,0 +1,12 @@
+## YAML template
+---
+default: --format progress -p html -p qa -p chrome
+html: --format html --out=results/reports.html
+json: --format json --out=results/reports.json
+doc: --format pretty
+smoke: --format progress --tag @smoke -p html
+dev: ENVIRONMENT_TYPE=dev
+qa: ENVIRONMENT_TYPE=qa
+uat: ENVIRONMENT_TYPE=uat
+chrome: BROWSER=chrome
+firefox: BROWSER=firefox

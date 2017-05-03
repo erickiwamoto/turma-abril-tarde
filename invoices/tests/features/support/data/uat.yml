@@ -1,0 +1,10 @@
+url: http://uat.ninjainvoices.com
+users:
+  admin:
+    name: 'Kato Danzo'
+    email: 'kato.zando@qaninja.net'
+    password: 'ninja#123'
+  analyst:
+    name: 'Gaiden'
+    email: gaiden@qaninja.com.br
+    password: 'test#123'

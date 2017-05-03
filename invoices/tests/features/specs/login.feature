@@ -4,7 +4,8 @@ Funcionalidade: Login
   Sendo um usuário do Invoices
   Posso fazer login no sistema
   Para que eu possa cadastrar meus clientes e lançar faturas
-  
+
+@smoke
 Cenario: Acessa pagina de login
   Quando acesso a pagina de Login
   Então vejo a página de login
@@ -12,11 +13,9 @@ Cenario: Acessa pagina de login
 @logout @smoke
 Cenario: Login com sucesso
   
-  Dado que eu tenho um usuário:
-      | Usuario | kato.danzo@qaninja.com.br | 
-      | Senha   | secret                    | 
+  Dado que eu tenho um usuário admin
   Quando faço login
-  Então vejo o Dashboard com a mensagem "Bem Vindo Kato Danzo!"
+  Então vejo o Dashboard com a mensagem "Bem Vindo NAME!"
     E vejo o email do usuário no menu superior
 
 @inv
@@ -29,8 +28,9 @@ Esquema do Cenário: Login sem sucesso
   Exemplos:
       | usuario                     | senha    | mensagem                            | 
       | "kato.danzo@qaninja.com.br" | "abc123" | "Incorrect password"                | 
+      | "kato.dando*qaninja.com.br" | "secret" | "Email is required."                | 
       | "kato.danzo@qaninja.net"    | "secret" | "User not found"                    | 
-      | "kato.dando*qaninja.com.br" | "secret" | "Please enter your e-mail address." | 
+
 
 @hybrid
 Esquema do Cenário: Login com data table

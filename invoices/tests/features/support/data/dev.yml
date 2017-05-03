@@ -1,0 +1,10 @@
+url: http://locahost:3000
+users:
+  admin:
+    name: 'Kato Danzo'
+    email: 'kato.zando@qaninja.com'
+    password: 'xpto'
+  analyst:
+    name: 'Mike'
+    email: analyst@qaninja.com.br
+    password: 'test#abc'
